@@ -1,6 +1,6 @@
 [
     {"id": 1, "name": "Relience", "age": 22},
     {"id": 2, "name": "neloc", "age": 25},
-    {"id": 2, "name": "Ankit", "age": 35}
-
+    {"id": 3, "name": "Ankit", "age": 35},
+    {"id": 4, "name": "Manoj", "age": 15}
 ]
