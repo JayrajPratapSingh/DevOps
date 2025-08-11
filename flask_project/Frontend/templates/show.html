@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Show All Records</title>
+    <!-- Include Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div class="max-w-5xl mx-auto my-10 p-4 bg-white rounded shadow">
+        <h1 class="text-2xl font-bold mb-6 text-center">All Student Records</h1>
+
+        <table class="min-w-full bg-white border border-gray-300 rounded-lg">
+            <thead class="bg-gray-200 border-b border-gray-300">
+                <tr>
+                    <th class="text-left py-3 px-6 font-semibold text-gray-700 border-r border-gray-300">Name</th>
+                    <th class="text-left py-3 px-6 font-semibold text-gray-700 border-r border-gray-300">Email</th>
+                    <th class="text-left py-3 px-6 font-semibold text-gray-700">Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in records %}
+                <tr class="border-b border-gray-300 hover:bg-gray-100">
+                    <td class="py-3 px-6 border-r border-gray-300">{{ record.name }}</td>
+                    <td class="py-3 px-6 border-r border-gray-300">{{ record.email }}</td>
+                    <td class="py-3 px-6">{{ record.password }}</td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="3" class="py-6 text-center text-gray-500">No records found</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
