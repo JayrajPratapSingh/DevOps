@@ -9,6 +9,7 @@ db = client["todoDB"]
 collection = db["todoItems"]
 # item ID
 # item UUID
+# hash added
 
 @app.route('/submittodoitem', methods=['POST'])
 def submit_todo_item():
