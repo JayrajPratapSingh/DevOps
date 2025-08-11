@@ -8,6 +8,8 @@ client = MongoClient("mongodb://localhost:27017/")
 db = client["todoDB"]
 collection = db["todoItems"]
 # item ID
+# item UUID
+
 @app.route('/submittodoitem', methods=['POST'])
 def submit_todo_item():
     data = request.get_json()
